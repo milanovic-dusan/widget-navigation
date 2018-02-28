@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+   <html xmlns="http://www.w3.org/1999/xhtml" xmlns:g="http://www.backbase.com/2008/gadget"
+      xml:lang="en">
+   <head>
+   <title>Content advanced</title>
+   <link rel="stylesheet" type="text/css" href="./styles/advanced-content-template.css" />
+   <g:preferences>
+      <g:preference name="templateUrl" label="Content Template" type="select-one"
+         default="$(contextRoot)/static/features/[BBHOST]/widget-content-templates/templates/jumbotron.html">
+         <g:enumeration label="Jumbotron"
+            value="$(contextRoot)/static/features/[BBHOST]/widget-content-templates/templates/jumbotron.html"
+            />
+            <g:enumeration label="Version"
+            value="$(contextRoot)/static/features/[BBHOST]/widget-content-templates/templates/version.html"
+            />
+            <g:enumeration label="Article Left"
+            value="$(contextRoot)/static/features/[BBHOST]/widget-content-templates/templates/article-left.html"
+            />
+            <g:enumeration label="Article Right"
+            value="$(contextRoot)/static/features/[BBHOST]/widget-content-templates/templates/article-right.html"
+            />
+            <g:enumeration label="Article"
+            value="$(contextRoot)/static/features/[BBHOST]/widget-content-templates/templates/article.html"
+            />
+            <g:enumeration label="Contact Support"
+            value="$(contextRoot)/static/features/[BBHOST]/widget-content-templates/templates/contact-support.html"
+            />
+            <g:enumeration label="Contact Banner"
+            value="$(contextRoot)/static/features/[BBHOST]/widget-content-templates/templates/contact-banner.html"
+            />
+            <g:enumeration label="Content text"
+            value="$(contextRoot)/static/features/[BBHOST]/widget-content-templates/templates/content-text.html"
+            />
+            <g:enumeration label="Divider"
+            value="$(contextRoot)/static/features/[BBHOST]/widget-content-templates/templates/divider.html"
+            />
+            <g:enumeration label="Banner"
+            value="$(contextRoot)/static/features/[BBHOST]/widget-content-templates/templates/banner.html"
+            />
+            <g:enumeration label="Customer Banner"
+            value="$(contextRoot)/static/features/[BBHOST]/widget-content-templates/templates/banner-customer.html"
+            />
+            <g:enumeration label="Dealer Banner"
+            value="$(contextRoot)/static/features/[BBHOST]/widget-content-templates/templates/banner-dealer.html"
+            />
+            <g:enumeration label="Image"
+            value="$(contextRoot)/static/features/[BBHOST]/widget-content-templates/templates/image.html"
+            />
+            <g:enumeration label="Jumbo Text"
+            value="$(contextRoot)/static/features/[BBHOST]/widget-content-templates/templates/jumbo-text.html"
+            />
+            <g:enumeration label="Jumbo Text Dealer Locator"
+            value="$(contextRoot)/static/features/[BBHOST]/widget-content-templates/templates/jumbo-dealerlocator.html"
+            />
+            <g:enumeration label="Jumbotron Text"
+            value="$(contextRoot)/static/features/[BBHOST]/widget-content-templates/templates/jumbotron-text.html"
+            />
+            <g:enumeration label="Landing Simple"
+            value="$(contextRoot)/static/features/[BBHOST]/widget-content-templates/templates/landing-simple.html"
+            />
+            <g:enumeration label="Logo Footer"
+            value="$(contextRoot)/static/features/[BBHOST]/widget-content-templates/templates/logo-footer.html"
+            />
+            <g:enumeration label="Logo"
+            value="$(contextRoot)/static/features/[BBHOST]/widget-content-templates/templates/logo.html"
+            />
+            <g:enumeration label="Logo Finance Calculator"
+            value="$(contextRoot)/static/features/[BBHOST]/widget-content-templates/templates/logo-fin-calculator.html"
+            />
+            <g:enumeration label="Media"
+            value="$(contextRoot)/static/features/[BBHOST]/widget-content-templates/templates/media.html"
+            />
+            <g:enumeration label="Policy"
+            value="$(contextRoot)/static/features/[BBHOST]/widget-content-templates/templates/policy.html"
+            />
+            <g:enumeration label="Search Simple"
+            value="$(contextRoot)/static/features/[BBHOST]/widget-content-templates/templates/search-simple.html"
+            />
+            <g:enumeration
+            label="Video Heading Content"
+            value="$(contextRoot)/static/features/[BBHOST]/widget-content-templates/templates/video-heading.html"
+            />
+            <g:enumeration label="Text"
+            value="$(contextRoot)/static/features/[BBHOST]/widget-content-templates/templates/text.html"
+            />
+            <g:enumeration label="LandingBlock"
+            value="$(contextRoot)/static/features/[BBHOST]/widget-content-templates/templates/bh-block.html"
+            />
+            <g:enumeration label="Site-Outage"
+            value="$(contextRoot)/static/features/[BBHOST]/widget-content-templates/templates/site-outage.html"
+            />
+            <g:enumeration label="Developers: Navigation"
+            value="$(contextRoot)/static/features/[BBHOST]/widget-content-templates/templates/navigation-docs.html"
+            />
+            <g:enumeration label="Developers: Landing Banner"
+            value="$(contextRoot)/static/features/[BBHOST]/widget-content-templates/templates/banner-developers.html"
+            />
+            <g:enumeration label="Developers: Landing Banner Blue Btn"
+                           value="$(contextRoot)/static/features/[BBHOST]/widget-content-templates/templates/banner-developers-btn-blue.html"
+            />
+            <g:enumeration label="Developers: Landing Banner White Btn"
+                           value="$(contextRoot)/static/features/[BBHOST]/widget-content-templates/templates/banner-developers-btn-white.html"
+            />
+            <g:enumeration label="Developers: Article"
+            value="$(contextRoot)/static/features/[BBHOST]/widget-content-templates/templates/developers-article.html"
+            />
+            <g:enumeration label="Developers: Article Left"
+            value="$(contextRoot)/static/features/[BBHOST]/widget-content-templates/templates/dev-article-left.html"
+            />
+            <g:enumeration label="Developers: Article Left Blue Btn"
+                           value="$(contextRoot)/static/features/[BBHOST]/widget-content-templates/templates/dev-article-left-btn-blue.html"
+            />
+            <g:enumeration label="Developers: Article Left White Btn"
+                           value="$(contextRoot)/static/features/[BBHOST]/widget-content-templates/templates/dev-article-left-btn-white.html"
+            />
+            <g:enumeration label="Developers: Article Right"
+            value="$(contextRoot)/static/features/[BBHOST]/widget-content-templates/templates/dev-article-right.html"
+            />
+            <g:enumeration label="Developers: Simple Banner"
+            value="$(contextRoot)/static/features/[BBHOST]/widget-content-templates/templates/dev-banner-simple.html"
+            />
+            <g:enumeration label="Developers: Feedback"
+            value="$(contextRoot)/static/features/[BBHOST]/widget-content-templates/templates/developers-feedback.html"
+            />
+            <g:enumeration label="Developers: Callout"
+            value="$(contextRoot)/static/features/[BBHOST]/widget-content-templates/templates/developers-callout.html"
+            />
+         <g:enumeration label="LA-Text Box Homepage"
+                        value="$(contextRoot)/static/features/[BBHOST]/widget-content-templates/templates/card.html" />
+         <g:enumeration label="LA-Error Text Card"
+                        value="$(contextRoot)/static/features/[BBHOST]/widget-content-templates/templates/heading-text-error.html" />
+         <g:enumeration label="LA-Text Box Landing Page"
+                        value="$(contextRoot)/static/features/[BBHOST]/widget-content-templates/templates/text-box-landing-page.html" />
+         <g:enumeration label="LA-Not Found card"
+                        value="$(contextRoot)/static/features/[BBHOST]/widget-content-templates/templates/page-not-found.html" />
+         <g:enumeration label="LA-Not Found second card"
+                        value="$(contextRoot)/static/features/[BBHOST]/widget-content-templates/templates/page-not-found-second.html" />
+         <g:enumeration label="LA-Image"
+                        value="$(contextRoot)/static/features/[BBHOST]/widget-content-templates/templates/image-logo.html" />
+         <g:enumeration label="LA-Accordion Heading"
+                        value="$(contextRoot)/static/features/[BBHOST]/widget-content-templates/templates/acc.html" />
+         <g:enumeration label="LA-Accordion Content"
+                        value="$(contextRoot)/static/features/[BBHOST]/widget-content-templates/templates/accordion-collapse.html" />
+         <g:enumeration label="LA-Accordion No Footer"
+                        value="$(contextRoot)/static/features/[BBHOST]/widget-content-templates/templates/laso_accordion_nofooter.html" />
+         <g:enumeration label="LA-Accordion No Bullet Footer"
+                        value="$(contextRoot)/static/features/[BBHOST]/widget-content-templates/templates/laso_accordion_nobulletfooter.html" />
+         <g:enumeration label="LA-Text Image Box"
+                        value="$(contextRoot)/static/features/[BBHOST]/widget-content-templates/templates/text-image-box.html" />
+         <g:enumeration label="LA-Text Image Box Flexible"
+                        value="$(contextRoot)/static/features/[BBHOST]/widget-content-templates/templates/text-image-flexible-height.html" />
+         <g:enumeration label="LA-Body Text Left Image 2 CTA"
+                        value="$(contextRoot)/static/features/[BBHOST]/widget-content-templates/templates/body-text-left-image.html" />
+         <g:enumeration label="LA-Body Text Left Image 1 CTA"
+                        value="$(contextRoot)/static/features/[BBHOST]/widget-content-templates/templates/body-text-left-image-one-cta.html" />
+         <g:enumeration label="LA-Body Text Left Image"
+                        value="$(contextRoot)/static/features/[BBHOST]/widget-content-templates/templates/body-text-left-image-no-cta.html" />
+         <g:enumeration label="LA-Body Text Right Image 2 CTA"
+                        value="$(contextRoot)/static/features/[BBHOST]/widget-content-templates/templates/body-text-right-image.html" />
+         <g:enumeration label="LA-Body Text Right Image 1 CTA"
+                        value="$(contextRoot)/static/features/[BBHOST]/widget-content-templates/templates/body-text-right-image-one-cta.html" />
+         <g:enumeration label="LA-Body Text Right Image"
+                        value="$(contextRoot)/static/features/[BBHOST]/widget-content-templates/templates/body-text-right-image-no-cta.html" />
+         <g:enumeration label="LA-Header Login"
+                        value="$(contextRoot)/static/features/[BBHOST]/widget-content-templates/templates/laso-login.html" />
+         <g:enumeration label="LA-Hero Image 2 CTA"
+                        value="$(contextRoot)/static/features/[BBHOST]/widget-content-templates/templates/heroImage.html" />
+         <g:enumeration label="LA-Carousel Card SPO"
+                        value="$(contextRoot)/static/features/[BBHOST]/widget-content-templates/templates/laso-carouselcard.html" />
+         <g:enumeration label="LA-Carousel Card NO SPO"
+                        value="$(contextRoot)/static/features/[BBHOST]/widget-content-templates/templates/laso-carouselcard-nosp.html" />
+         <g:enumeration label="LA-Carousel Card mobile"
+                        value="$(contextRoot)/static/features/[BBHOST]/widget-content-templates/templates/laso-carouselcard-mobile.html" />
+         <g:enumeration label="LA-Carousel Card mobile nospo"
+                        value="$(contextRoot)/static/features/[BBHOST]/widget-content-templates/templates/laso-carouselcard-mobile-nosp.html" />
+         <g:enumeration label="LA-Footer Logo"
+                        value="$(contextRoot)/static/features/[BBHOST]/widget-content-templates/templates/laso_footer_logo.html" />
+         <g:enumeration label="LA-Footer Logo (Personal)"
+                        value="$(contextRoot)/static/features/[BBHOST]/widget-content-templates/templates/laso_footer_logo_personal.html" />
+         <g:enumeration label="LA-Footer Social"
+                        value="$(contextRoot)/static/features/[BBHOST]/widget-content-templates/templates/laso_footer_socialmedia.html" />
+         <g:enumeration label="LA-Heading Text"
+                        value="$(contextRoot)/static/features/[BBHOST]/widget-content-templates/templates/heading-text.html" />
+         <g:enumeration label="LA-Hero Image 1 CTA Secondary"
+                        value="$(contextRoot)/static/features/[BBHOST]/widget-content-templates/templates/heroImage-offers-button.html" />
+         <g:enumeration label="LA-Hero Image 1 CTA Primary"
+                        value="$(contextRoot)/static/features/[BBHOST]/widget-content-templates/templates/heroImage-quote-button.html" />
+         <g:enumeration label="LA-Hero Image"
+                        value="$(contextRoot)/static/features/[BBHOST]/widget-content-templates/templates/heroImage-no-button.html" />
+         <g:enumeration label="LA-Sub-heading Text"
+                        value="$(contextRoot)/static/features/[BBHOST]/widget-content-templates/templates/sub-heading-text.html" />
+         <g:enumeration label="LA-Header Logo"
+                        value="$(contextRoot)/static/features/[BBHOST]/widget-content-templates/templates/laso-logo.html" />
+         <g:enumeration label="LA-Header Logo (Personal)"
+                        value="$(contextRoot)/static/features/[BBHOST]/widget-content-templates/templates/laso-logo-personal.html" />
+         <g:enumeration label="LA-Footer Text"
+                        value="$(contextRoot)/static/features/[BBHOST]/widget-content-templates/templates/la-footer-text.html" />
+         <g:enumeration label="LA-Marketing Card 1 CTA"
+                        value="$(contextRoot)/static/features/[BBHOST]/widget-content-templates/templates/marketing-two-image.html" />
+         <g:enumeration label="LA-Marketing Card"
+                        value="$(contextRoot)/static/features/[BBHOST]/widget-content-templates/templates/marketing-two-image-without-button.html" />
+         <g:enumeration label="LA-Floating Bar 3 CTA"
+                        value="$(contextRoot)/static/features/[BBHOST]/widget-content-templates/templates/float-navs.html" />
+         <g:enumeration label="LA-Marketing Card Centred 1 CTA"
+                        value="$(contextRoot)/static/features/[BBHOST]/widget-content-templates/templates/marketing-center-text.html" />
+         <g:enumeration label="LA-Marketing Card Centred"
+                        value="$(contextRoot)/static/features/[BBHOST]/widget-content-templates/templates/marketing-center-text-without-button.html" />
+         <g:enumeration label="LA-Hero Image LP 2 CTA"
+                        value="$(contextRoot)/static/features/[BBHOST]/widget-content-templates/templates/hero-image-landing-page.html" />
+         <g:enumeration label="LA-Hero Image LP"
+                        value="$(contextRoot)/static/features/[BBHOST]/widget-content-templates/templates/hero-image-landing-page-without-button.html" />
+         <g:enumeration label="LA-Hero Image LP Secondary CTA"
+                        value="$(contextRoot)/static/features/[BBHOST]/widget-content-templates/templates/hero-image-landing-page-with-offer-button.html" />
+         <g:enumeration label="LA-Hero Image LP Primary CTA"
+                        value="$(contextRoot)/static/features/[BBHOST]/widget-content-templates/templates/hero-image-landing-page-with-quote-button.html" />
+         <g:enumeration label="LA-Text Box Left Aligned (Response Tap)"
+                        value="$(contextRoot)/static/features/[BBHOST]/widget-content-templates/templates/telephone-number-one.html" />
+         <g:enumeration label="LA-Text Box Left Aligned"
+                        value="$(contextRoot)/static/features/[BBHOST]/widget-content-templates/templates/telephone-number.html" />
+         <g:enumeration label="LA-Body Text with Heading 2 CTA"
+                        value="$(contextRoot)/static/features/[BBHOST]/widget-content-templates/templates/laso_heading_bodytext_twocta.html" />
+         <g:enumeration label="LA-Body Text with Heading 1 CTA"
+                        value="$(contextRoot)/static/features/[BBHOST]/widget-content-templates/templates/laso_heading_bodytext_onecta.html" />
+         <g:enumeration label="LA-Body Text with Heading"
+                        value="$(contextRoot)/static/features/[BBHOST]/widget-content-templates/templates/laso_heading_bodytext.html" />
+         <g:enumeration label="LA-Body Text"
+                        value="$(contextRoot)/static/features/[BBHOST]/widget-content-templates/templates/laso_bodytext.html" />
+         <g:enumeration label="LA-Body Text 1 CTA"
+                        value="$(contextRoot)/static/features/[BBHOST]/widget-content-templates/templates/laso_bodytext_onecta.html" />
+         <g:enumeration label="LA-Body Text 2 CTA"
+                        value="$(contextRoot)/static/features/[BBHOST]/widget-content-templates/templates/laso_bodytext_twocta.html" />
+         <g:enumeration label="LA-Button 2 CTA"
+                        value="$(contextRoot)/static/features/[BBHOST]/widget-content-templates/templates/laso_twocta.html" />
+         <g:enumeration label="LA -Button 1 CTA"
+                        value="$(contextRoot)/static/features/[BBHOST]/widget-content-templates/templates/laso_onecta.html" />
+         <g:enumeration label="LA-Full Width Highlight Box 2 CTA"
+                        value="$(contextRoot)/static/features/[BBHOST]/widget-content-templates/templates/fullwidthbox.html" />
+         <g:enumeration label="LA-Full Width Highlight Box"
+                        value="$(contextRoot)/static/features/[BBHOST]/widget-content-templates/templates/fullwidthbox-zero-button.html" />
+         <g:enumeration label="LA-Full Width Box Highlight 1 CTA"
+                        value="$(contextRoot)/static/features/[BBHOST]/widget-content-templates/templates/fullwidthbox-one-button.html" />
+         <g:enumeration label="LA-Body Bulleted 2 CTA"
+                        value="$(contextRoot)/static/features/[BBHOST]/widget-content-templates/templates/content-page-bulleted-list.html" />
+         <g:enumeration label="LA-Body Bulleted 1 CTA"
+                        value="$(contextRoot)/static/features/[BBHOST]/widget-content-templates/templates/content-page-bulleted-list-one-cta.html" />
+         <g:enumeration label="LA-Body Bulleted"
+                        value="$(contextRoot)/static/features/[BBHOST]/widget-content-templates/templates/content-page-bulleted-list-no-cta.html" />
+         <g:enumeration label="LA-Body Bulleted NoHeading 1 CTA"
+                        value="$(contextRoot)/static/features/[BBHOST]/widget-content-templates/templates/content-page-bullist-noheading-onecta.html" />
+         <g:enumeration label="LA-Body Bulleted NoHeading"
+                        value="$(contextRoot)/static/features/[BBHOST]/widget-content-templates/templates/content-page-bullist-noheading-nocta.html" />
+         <g:enumeration label="LA-Body Bulleted NoHeading 2 CTA"
+                        value="$(contextRoot)/static/features/[BBHOST]/widget-content-templates/templates/content-page-noheading-twocta.html" />
+          <g:enumeration label="LA-Body Tick 2 CTA"
+                        value="$(contextRoot)/static/features/[BBHOST]/widget-content-templates/templates/content-page-tick-list-twoCTA.html" />
+          <g:enumeration label="LA-Body Tick 1 CTA"
+                        value="$(contextRoot)/static/features/[BBHOST]/widget-content-templates/templates/content-tick-list-onecta.html" />
+          <g:enumeration label="LA-Body Tick"
+                        value="$(contextRoot)/static/features/[BBHOST]/widget-content-templates/templates/content-tick-list-nocta.html" />
+          <g:enumeration label="LA-Body Tick NoHeading 2 CTA"
+                        value="$(contextRoot)/static/features/[BBHOST]/widget-content-templates/templates/content-tick-noheading-twocta.html" />
+          <g:enumeration label="LA-Body Tick NoHeading 1 CTA"
+                        value="$(contextRoot)/static/features/[BBHOST]/widget-content-templates/templates/content-tick-noheading-oncta.html" />
+          <g:enumeration label="LA-Body Tick NoHeading"
+                        value="$(contextRoot)/static/features/[BBHOST]/widget-content-templates/templates/content-tick-noheading-nocta.html" />
+         <g:enumeration label="Cookie"
+                        value="$(contextRoot)/static/features/[BBHOST]/widget-content-templates/templates/la-cookie-text.html" />
+         <g:enumeration label="LA-Marketing Card Bulleted Carousel"
+                        value="$(contextRoot)/static/features/[BBHOST]/widget-content-templates/templates/marketing-bulleted-list-carousel.html" />
+         <g:enumeration label="LA-Marketing Card Bulleted"                     
+                       value="$(contextRoot)/static/features/[BBHOST]/widget-content-templates/templates/marketing-bulleted-list-carousel-withoutCTA.html" />
+         <g:enumeration label="LA-Marketing Card Bulleted NoPagin"                     
+                       value="$(contextRoot)/static/features/[BBHOST]/widget-content-templates/templates/marketing-bulleted-list-carousel-nopagin.html" />
+         <g:enumeration label="LA-Hero Image Back Arrow"
+                        value="$(contextRoot)/static/features/[BBHOST]/widget-content-templates/templates/funding-hero-image.html" />
+      </g:preference>
+      <g:preference name="bgImageContainer" label="Background position" type="select-one"
+         default="widget">
+         <g:enumeration label="Widget" value="widget" />
+         <g:enumeration label="Fullscreen" value="fullscreen" />
+      </g:preference>
+      <g:preference name="bgImageSize" type="select-one" default="auto">
+         <g:enumeration label="Auto" value="auto" />
+         <g:enumeration label="Contain" value="contain" />
+         <g:enumeration label="Cover" value="cover" />
+         <g:enumeration label="Full" value="100% 100%" />
+      </g:preference>
+      <g:preference name="bgImageScroll" label="Background Scroll" type="select-one" default="scroll">
+         <g:enumeration label="Scroll" value="scroll" />
+         <g:enumeration label="Fixed" value="fixed" />
+      </g:preference>
+   </g:preferences>
+   </head>
+   <body g:onload="requireWidget(__WIDGET__, 'scripts/main');"
+      class="widget-advanced-content-template-body-lloyd">
+      <div class="widget-content widget-advanced-content-template">
+         <g:include proxy="false" src="$(contextRoot)/contenttemplates/rendered">
+            <g:http-param name="contextItemName" value="__WIDGET__.model.contextItemName" />
+            <g:http-param name="uuid" value="__WIDGET__.model.uuid" />
+        </g:include>
+    </div>
+</body>
+
+</html>
