@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:g="http://www.backbase.com/2008/gadget" xml:lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/xml; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <g:preferences>
+        <g:preference name="template" label="Template" type="select-one"
+        default="$(itemRoot)/templates/login.html">
+            <g:enumeration label="Login Dealer"
+            value="$(itemRoot)/templates/login.html" />
+            <g:enumeration label="Login Customer"
+            value="$(itemRoot)/templates/loginCustomer.html" />
+        </g:preference>
+    </g:preferences>
+</head>
+
+<body g:onload="requireWidget(__WIDGET__, 'scripts/main')" class="lp-widget-login ng-cloak"
+ng-controller="MainCtrl as mainCtrl">
+    <g:model objectType="link" renderer="advancedNav">
+        <g:template value="${template}" />
+    </g:model>
+</body>
+
+</html>
