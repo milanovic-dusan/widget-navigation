@@ -64,7 +64,7 @@
 </head>
 
 <body class="widget-navigation row"
- g:onload="b$.universal.widgets.NavigationWidget.start(__WIDGET__),requireWidget(__WIDGET__,'scripts/main')"
+ g:onload="requireWidget(__WIDGET__,'scripts/main'); b$.universal.widgets.NavigationWidget.start(__WIDGET__);"
  ng-controller="MainCtrl as mainCtrl">
     <g:model objectType="link" renderer="advancedNav">
         <g:param name="navStartResolver" value="${navStartResolver}" />
