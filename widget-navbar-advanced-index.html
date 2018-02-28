@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" xmlns:g="http://www.backbase.com/2008/gadget">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Advanced Navbar</title>
+    <g:preferences>
+        <g:preference name="navRoot" label="Navigation Root Link" type="text"
+        viewHint="text-input,manager,designModeOnly"
+        />
+        <g:preference name="showParent" label="Show navigation root" type="boolean"
+        viewHint="checkbox,manager,designModeOnly"
+        />
+        <g:preference name="navDepth" label="Navigation Depth" type="select-one"
+        default="1" viewHint="select-one,manager,designModeOnly">
+            <g:enumeration label="One Level" value="1" />
+            <g:enumeration label="Two Levels" value="2" />
+            <g:enumeration label="Three Levels" value="3" />
+        </g:preference>
+        <g:preference name="navTemplate" label="Template" type="select-one"
+        default="$(contextRoot)/static/widgets/[BBHOST]/widget-navbar-advanced/templates/mustache_top_level.html"
+            viewHint="select-one,manager,designModeOnly">
+            <g:enumeration label="Landing Navigation"
+            value="$(contextRoot)/static/widgets/[BBHOST]/widget-navbar-advanced/templates/mustache_top_level.html"
+            />
+            <g:enumeration label="Dealer Sub Navigation"
+            value="$(contextRoot)/static/widgets/[BBHOST]/widget-navbar-advanced/templates/mustache_dlr_sub_nav.html"
+            />
+            <g:enumeration label="Customer Sub Navigation"
+            value="$(contextRoot)/static/widgets/[BBHOST]/widget-navbar-advanced/templates/mustache_cust_sub_nav.html"
+            />
+        </g:preference>
+        <g:preference name="scrollSetting" label="Page Scroll settings" type="select-one"
+        viewhint="select-one,manager,designModeOnly">
+            <g:enumeration value="normal" label="Normal" />
+            <g:enumeration value="transparency" label="Transparency" />
+            <g:enumeration value="hide-show" label="Hide/Show" />
+        </g:preference>
+        <g:preference name="launcherIcon" label="Icon for Launcher Menu" type="select-one"
+        viewhint="select-one,manager,designModeOnly">
+            <g:enumeration value="arrow-left" label="Arrow left" />
+            <g:enumeration value="list" label="List" />
+        </g:preference>
+        <g:preference name="containerType" label="Container type" type="select-one"
+        viewhint="select-one,manager,designModeOnly">
+            <g:enumeration value="fixed" label="Fixed" />
+            <g:enumeration value="fluid" label="Fluid" />
+        </g:preference>
+    </g:preferences>
+</head>
+
+<body g:onload="requireWidget(__WIDGET__, 'scripts/main');" class="widget-navbar-advanced" 
+  ng-controller="NavBarAdvancedController as mainCtrl">
+    <g:model objectType="link" renderer="advancedNav" class="clearfix">
+        <g:param name="depth" value="${navDepth}" />
+        <g:param name="showParent" value="${showParent}" />
+        <g:param name="uuid" value="${navRoot}" />
+        <g:param name="active" value="0" />
+        <g:param name="useGeneratedUrl" value="false" />
+        <!-- 'true' to use generated url -->
+        <g:template value="${navTemplate}" />
+    </g:model>
+</body>
+
+</html>
