@@ -6,11 +6,9 @@
     <title>Advanced Navbar</title>
     <g:preferences>
         <g:preference name="navRoot" label="Navigation Root Link" type="text"
-        viewHint="text-input,manager,designModeOnly"
-        />
+        viewHint="text-input,manager,designModeOnly" />
         <g:preference name="showParent" label="Show navigation root" type="boolean"
-        viewHint="checkbox,manager,designModeOnly"
-        />
+        viewHint="checkbox,manager,designModeOnly" />
         <g:preference name="navDepth" label="Navigation Depth" type="select-one"
         default="1" viewHint="select-one,manager,designModeOnly">
             <g:enumeration label="One Level" value="1" />
@@ -21,14 +19,11 @@
         default="$(contextRoot)/static/widgets/[BBHOST]/widget-navbar-advanced/templates/mustache_top_level.html"
             viewHint="select-one,manager,designModeOnly">
             <g:enumeration label="Landing Navigation"
-            value="$(contextRoot)/static/widgets/[BBHOST]/widget-navbar-advanced/templates/mustache_top_level.html"
-            />
+            value="$(contextRoot)/static/widgets/[BBHOST]/widget-navbar-advanced/templates/mustache_top_level.html" />
             <g:enumeration label="Dealer Sub Navigation"
-            value="$(contextRoot)/static/widgets/[BBHOST]/widget-navbar-advanced/templates/mustache_dlr_sub_nav.html"
-            />
+            value="$(contextRoot)/static/widgets/[BBHOST]/widget-navbar-advanced/templates/mustache_dlr_sub_nav.html" />
             <g:enumeration label="Customer Sub Navigation"
-            value="$(contextRoot)/static/widgets/[BBHOST]/widget-navbar-advanced/templates/mustache_cust_sub_nav.html"
-            />
+            value="$(contextRoot)/static/widgets/[BBHOST]/widget-navbar-advanced/templates/mustache_cust_sub_nav.html" />
         </g:preference>
         <g:preference name="scrollSetting" label="Page Scroll settings" type="select-one"
         viewhint="select-one,manager,designModeOnly">
@@ -49,8 +44,7 @@
     </g:preferences>
 </head>
 
-<body g:onload="requireWidget(__WIDGET__, 'scripts/main');" class="widget-navbar-advanced" 
-  ng-controller="NavBarAdvancedController as mainCtrl">
+<body g:onload="requireWidget(__WIDGET__, 'scripts/main')" class="widget-navbar-advanced" ng-controller="NavBarAdvancedController as mainCtrl">
     <g:model objectType="link" renderer="advancedNav" class="clearfix">
         <g:param name="depth" value="${navDepth}" />
         <g:param name="showParent" value="${showParent}" />
