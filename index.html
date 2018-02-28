@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:g="http://www.backbase.com/2008/gadget" xml:lang="en">
+
+<head>
+    <script type="text/javascript" src="scripts/browser-support.js"></script>
+    <title>Static Navigation Widget</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="author" content="Backbase" />
+    <script type="text/javascript" src="scripts/angular-cookiesv1.2.28.min.js"></script>
+    <script type="text/javascript" src="scripts/navigation.js"></script>
+    <g:preferences>
+        <g:preference name="navStartResolver" label="Navigation Type" type="select-one" default="fixed">
+            <g:enumeration label="Fixed root" value="fixed" />
+            <g:enumeration label="Contextual root (relative)" value="relativeContextual" />
+            <g:enumeration label="Contextual root (absolute)" value="fixedContextual" />
+        </g:preference>
+        <g:preference name="uuid" label="Navigation root" type="text" default="" />
+        <g:preference name="distance" label="Navigation root" type="select-one" default="1">
+            <g:enumeration label="1 level up" value="1" />
+            <g:enumeration label="2 levels up" value="2" />
+            <g:enumeration label="3 levels up" value="3" />
+            <g:enumeration label="4 levels up" value="4" />
+            <g:enumeration label="5 levels up" value="5" />
+            <g:enumeration label="6 levels up" value="6" />
+            <g:enumeration label="7 levels up" value="7" />
+            <g:enumeration label="8 levels up" value="8" />
+            <g:enumeration label="9 levels up" value="9" />
+            <g:enumeration label="10 levels up" value="10" />
+            <g:enumeration label="All levels" value="-1" />
+        </g:preference>
+        <g:preference name="rootLevel" label="Navigation root" type="select-one" default="0">
+            <g:enumeration label="Top level" value="0" />
+            <g:enumeration label="level 1" value="1" />
+            <g:enumeration label="level 2" value="2" />
+            <g:enumeration label="level 3" value="3" />
+            <g:enumeration label="level 4" value="4" />
+            <g:enumeration label="level 5" value="5" />
+            <g:enumeration label="level 6" value="6" />
+            <g:enumeration label="level 7" value="7" />
+            <g:enumeration label="level 8" value="8" />
+            <g:enumeration label="level 9" value="9" />
+            <g:enumeration label="level 10" value="10" />
+        </g:preference>
+        <g:preference name="depth" label="Depth" type="select-one" default="1">
+            <g:enumeration label="1 Level" value="1" />
+            <g:enumeration label="2 Levels" value="2" />
+            <g:enumeration label="3 Levels" value="3" />
+            <g:enumeration label="4 Levels" value="4" />
+            <g:enumeration label="5 Levels" value="5" />
+            <g:enumeration label="6 Levels" value="6" />
+        </g:preference>
+        <g:preference name="template" label="Template"
+        type="select-one" default="$(itemRoot)/templates/default/mustache_top_level.html">
+            <g:enumeration label="Default" value="$(itemRoot)/templates/default/mustache_top_level.html" />
+            <g:enumeration label="BH_Nav_Dealer" value="$(itemRoot)/templates/nav-dealer/mustache_top_level.html" />
+            <g:enumeration label="BH_Nav_Footer" value="$(itemRoot)/templates/nav-footer/mustache_top_level.html" />
+            <g:enumeration label="BH_Nav_Customer" value="$(itemRoot)/templates/nav-customer/mustache_top_level.html" />
+            <g:enumeration label="BH_Nav_Hamburger" value="$(itemRoot)/templates/hamburger/mustache_top_level.html" />
+            <g:enumeration label="BH_NavCookie" value="$(itemRoot)/templates/cookie/cookie.html" />
+            <g:enumeration label="BH_Error" value="$(itemRoot)/templates/unsupported-browser/error.html" />
+            <g:enumeration label="BH_Docs_Navigation" value="$(itemRoot)/templates/docs-navigation/mustache-docs-navigation.html" />
+        </g:preference>
+    </g:preferences>
+</head>
+
+<body class="widget-navigation row"
+ g:onload="b$.universal.widgets.NavigationWidget.start(__WIDGET__),requireWidget(__WIDGET__,'scripts/main')"
+ ng-controller="MainCtrl as mainCtrl">
+    <g:model objectType="link" renderer="advancedNav">
+        <g:param name="navStartResolver" value="${navStartResolver}" />
+        <g:param name="uuid" value="${uuid}" />
+        <g:param name="rootLevel" value="${rootLevel}" />
+        <g:param name="distance" value="${distance}" />
+        <g:param name="depth" value="${depth}" />
+        <g:param name="showParent" value="${showParent}" />
+        <g:param name="useGeneratedUrl" value="false" />
+        <g:template value="${template}" />
+    </g:model>
+</body>
+
+</html>
