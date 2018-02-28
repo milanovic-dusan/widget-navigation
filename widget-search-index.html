@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:g="http://www.backbase.com/2008/gadget" xml:lang="en">
+
+<head>
+    <meta http-equiv="content-type" content="text/xml; charset=UTF-8" />
+    <g:preferences>
+        <g:preference name="template" label="Template" type="select-one"
+        default="$(itemRoot)/templates/search.html">
+            <g:enumeration label="Large" value="$(itemRoot)/templates/search-large.html" />
+            <g:enumeration label="Small" value="$(itemRoot)/templates/search-small.html" />
+        </g:preference>
+    </g:preferences>
+</head>
+
+<body g:onload="requireWidget(__WIDGET__,'scripts/main')" ng-controller="MainCtrl as ctrl"
+ class="widget-search ng-cloak">
+    <g:model objectType="link" renderer="advancedNav">
+        <g:template value="${template}" />
+    </g:model>
+</body>
+
+</html>
