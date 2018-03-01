@@ -22,7 +22,10 @@ define(function(require, exports, module) {
    * @ngInject
    */
   function run() {
-    // Module is Bootstrapped
+      // !this is just a POC!
+      // Proper way would be to modify require-confing.js
+      // to include appropriate path for the utag.js file
+      require(["/static/widgets/[BBHOST]/widget-tealium/scripts/tags/utag.js"]);
   }
 
   module.exports = base.createModule(module.name, deps).constant(
